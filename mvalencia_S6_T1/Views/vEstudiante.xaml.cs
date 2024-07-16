@@ -36,4 +36,10 @@ public partial class vEstudiante : ContentPage
         var objetoEstudiante = (Estudiante)e.SelectedItem;
         Navigation.PushAsync(new vEliminar(objetoEstudiante));
     }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        mostrar();
+    }
 }
